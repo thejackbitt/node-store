@@ -5,9 +5,10 @@ const Product = require("../lib/Product")
 describe("Customer", () => {
   describe("Instantiation", () => {
     it("should instantiate correctly", () => {
-      const customer = new Customer();
-      expect(customer).tobeDefined();
+      const customer = new Customer("Gary");
+      expect(customer.name).toBe("Gary")
       expect(customer.amountSpent).toBe(0);
+      expect(customer.productsPurchased).toEqual([]);
     })
   })
 
@@ -20,7 +21,8 @@ describe("Customer", () => {
       customer.buyProduct(store, product)
 
       expect(product.qty).toBeLessThan(50);
-      expect(customer.amountSpent).toBeMoreThan(0);
+      expect(customer.amountSpent).toBeGreaterThan(0);
+      expect(customer.productsPurchased).toContain("Widget")
     })
   })
 })
