@@ -5,8 +5,9 @@ const Product = require("../lib/Product")
 describe("Customer", () => {
   describe("Instantiation", () => {
     it("should instantiate correctly", () => {
-
-      // TODO: make sure an object is instantiated
+      const customer = new Customer();
+      expect(customer).tobeDefined();
+      expect(customer.amountSpent).toBe(0);
     })
   })
 
