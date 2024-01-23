@@ -12,6 +12,7 @@ const currentStore = new Store("your-store-name", 9, 16, [widget1, widget2, widg
 
 // Use inquirer to welcome the use to the store, and show a list of products for then to choose from
 function start(){
+  currentStore.displayWelcome();
 
 }
 
