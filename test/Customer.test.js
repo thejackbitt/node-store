@@ -17,7 +17,10 @@ describe("Customer", () => {
       const product = new Product("Widget", 22, 50);
       const customer = new Customer("John Doe");
       
-      // Hint: you will want to "expect" multiple different things here
+      customer.buyProduct(store, product)
+
+      expect(product.qty).toBeLessThan(50);
+      expect(customer.amountSpent).toBeMoreThan(0);
     })
   })
 })
