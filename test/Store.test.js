@@ -11,6 +11,7 @@ describe("Store", () => {
   describe("Name property", () => {
     it("should set the name property correctly", () => {
       // TODO (see "it" statement )
+      const store = new Store('abcd')
     })
   })
 
